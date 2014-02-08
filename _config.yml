@@ -1,6 +1,2 @@
-baseurl: http://wlz.github.io
-permalink: /blog/:year/:month/:day/:title
 markdown: rdiscount
 pygments: true
-date_format: "ordinal"
-subscribe_rss: /atom.xml
