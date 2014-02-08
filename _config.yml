@@ -1,5 +1,5 @@
-baseurl: http://wlz.github.io/blog
-permalink: /blog-cn/:year/:month/:day/:title
+baseurl: http://wlz.github.io
+permalink: /blog/:year/:month/:day/:title
 markdown: rdiscount
 pygments: true
 date_format: "ordinal"
