@@ -1,5 +1,11 @@
-<h2>²©¿Í</h2>
-<p>×îĞÂÎÄÕÂ</p>
+ï»¿---
+layout: default
+title: blog
+---
+
 <ul>
-ĞÂÄêÔ¸Íû
+ã€€ã€€{% for post in site.posts %}
+ã€€ã€€ã€€ã€€<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+ã€€ã€€{% endfor %}
 </ul>
+
