@@ -1,6 +1,6 @@
 body {
     font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑",  SimSun, "宋体", Heiti, "黑体", sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     margin: 5% 20% 5% 20%;
     padding: 2% 5% 5% 5%;
     width: 50%;
@@ -20,9 +20,8 @@ H2 {
     border-bottom: 2px LightGrey solid;
     width: 90%;
     line-height: 150%;
-    color: DarkGreen;
-}
-
+    color: CadetBlue;
+} 
 
 H3 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
@@ -32,8 +31,7 @@ H3 {
     width: 80%;
     line-height: 150%;
     color: DarkBlue;
-}
-
+} 
 
 H4 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
@@ -43,20 +41,17 @@ H4 {
     width: 80%;
     line-height: 150%;
     color: DarkBlue;
-}
-
+} 
 
 li {
     margin-left: 10px;
-}
-
+} 
 
 blockquote {
     border-left: 4px lightgrey solid;
     padding-left: 5px;
     margin-left: 20px;
-}
-
+} 
 
 pre {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
@@ -67,14 +62,12 @@ pre {
     line-height: 130%;
     margin-left: 10px;
     width: 95%;
-}
-
+} 
 
 code {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
     font-size: 90%;
-}
-
+} 
 
 a {
     text-decoration: none;
@@ -82,13 +75,11 @@ a {
     border-bottom: 1px dashed Red;
     padding: 1px;
     color: black;
-}
-
+} 
 
 a:hover {
 	background-color: LightGrey;
-}
-
+} 
 
 img {
     margin-left: 10px;
@@ -97,8 +88,7 @@ img {
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-}
-
+} 
 
 hr {
     color: LightGrey;
