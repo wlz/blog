@@ -72,7 +72,7 @@ code {
 a {
     text-decoration: none;
     cursor: hand;
-    border-bottom: 1px dashed Red;
+    border-bottom: 1px dashed Green;
     padding: 1px;
     color: black;
 } 
