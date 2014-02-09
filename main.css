@@ -71,7 +71,7 @@ code {
 
 a {
     text-decoration: none;
-    cursor: crosshair;
+    cursor: hand;
     border-bottom: 1px dashed Red;
     padding: 1px;
     color: black;
