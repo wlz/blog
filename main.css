@@ -1,6 +1,6 @@
 ﻿body {
     font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑",  SimSun, "宋体", Heiti, "黑体", sans-serif;
-    font-size: 19px;
+    font-size: 20px;
     margin: 5% 20% 5% 20%;
     padding: 2% 5% 5% 5%;
     width: 50%;
@@ -18,7 +18,7 @@ H2 {
     margin-bottom: 40px;
     padding: 5px;
     border-bottom: 2px LightGrey solid;
-    width: 90%;
+    width: 97%;
     line-height: 150%;
     color: CadetBlue;
 } 
@@ -56,18 +56,19 @@ blockquote {
 pre {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
     font-size: 75%;
-    border: solid 1px lightgrey;
-    background-color: Ivory;
+    background-color: MintCream;
     padding: 5px;
     line-height: 130%;
     margin-left: 10px;
     width: 95%;
+    border: solid 1px LightBlue;
     border-radius: 5px;
 } 
 
 code {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
-    font-size: 90%;
+    font-size: 95%;
+    color: Crimson; 
 } 
 
 a {
