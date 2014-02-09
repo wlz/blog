@@ -1,0 +1,19 @@
+﻿<html>
+	<head> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<link href="../main.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="../images/wlz.jpg">
+		<title>Environment.CurrentDirectory 的一个坑</title>
+	</head>
+	<body>
+		<h2>Environment.CurrentDirectory 的一个坑</h2>
+		事情是这样的，今天写测试代码的时候发现，进程 A 调用进程 B，A 与 B不在同一路径下，B 中使用 Environment.CurrentDirectory 获取当前路径，本以为获取的路径应为 B 所在目录，结果证明，获取路径为 A 路径；
+
+		要获取B所在路径，需使用:
+
+		<ul> 
+			<li>Path.GetDirectoryName(Application.ExecutablePath);</li>
+			<li>Path.GetDirectoryName(Assembly.GetEntryAssembly().Location).</li>
+		</ul> 
+	</body>
+</html>
