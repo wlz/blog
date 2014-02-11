@@ -79,13 +79,13 @@ code {
 a {
     text-decoration: none;
     cursor: hand;
-    border-bottom: 1px dashed Green;
+    border-bottom: 1px dashed DarkSeaGreen;
     padding: 1px;
     color: black;
 } 
 
 a:hover {
-	background-color: LightGrey;
+	background-color: MistyRose;
 } 
 
 img {
