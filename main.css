@@ -69,6 +69,8 @@ pre {
 code {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
     font-size: 75%;
+    margin-left: 4px;
+    margin-right: 4px;
     padding: 2px 4px;
     color: Navy; 
     background-color: MintCream;
