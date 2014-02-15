@@ -7,6 +7,28 @@
 	</head>
 	<body>
 		<h2>x86 汇编学习笔记 (1)</h2>
-		<p>max.s</p>
+		<h3>获取返回值</h3>
+		<p>创建名为 rtn.s 的汇编代码,并保存:</p>
+		<p><pre>.globl _start<br><br>_start:<br>movl $1, %eax<br>movl $5, %ebx<br><br>int $0x80</pre></p>
+		<p>将汇编代码汇编成机器码:<p>
+		<pre>as rtn.s -o rtn.o</pre>
+		<p>连接机器码成可执行文件:<p>
+		<pre>ld rtn.o -o rtn</pre>
+		<p>执行并测试:</p>
+		<pre>./rtn<br>echo $?<br>5</pre>
+		<h4>说明</h4>
+		<ul>
+		<li><code>.globl _start</code> 标明程序开始的地方；
+		<li><code>movl $1, %eax</code> 将 1 载入寄存器 eax ,表明告知 Linux 程序已准备好退出；
+		<li><code>movl $5, %ebx</code> Linux 用 ebx 保存程序的返回值，用于 shell 使用 <code>echo $? </code> 测试程序是否执行；
+		<li><code>int $0x80</code> 由用户进程返回。
+		</ul>
+		<h4>简化</h4>
+		<p>使用脚本简化汇编，连接，执行，测试过程：</p>
+		<pre>file=rtn<br><br>as $file.s -o $file.o<br>ld $file.o -o $file<br>rm ./$file.o<br><br>./$file<br>echo $?</pre>
+		<p>将脚本保存为 c.sh ,并添加执行权限 :<p> 
+		<pre>chmod +x ./c.sh</pre>
+		<p>执行脚本 c.sh ：</p> 
+		<pre>./c.sh<br>5</pre>
 	</body>
 </html> 
