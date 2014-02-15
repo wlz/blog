@@ -1,0 +1,18 @@
+﻿<html>
+	<head> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="../main.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="../images/wlz.jpg">
+		<title>Bash 用户级自定义配置</title>
+	</head>
+	<body>
+		<h2>Bash 用户级自定义配置</h2>
+		<p>Bash 的用户级别自定义配置存放在 ~/.bashrc 或者 ~/.bash_profile 文件下；<br>如需添加一个全局变量：TEST=“Hello world !”</p>
+		<pre>wlz@ubuntu:~$ vi ~/.bashrc<br>TEST="Hello world !"</pre>
+		<p>测试是否添加成功？</p>
+		<pre>wlz@ubuntu:~$ echo $TEST</pre>
+		<p>输出空，需要告知 shell 重新加载 .bashrc 文件,执行<code>source</code>命令</p>
+		<pre>wlz@ubuntu:~$ source ~/.bashrc<br>wlz@ubuntu:~$ echo $TEST<br>Hello world !</pre>
+		<p>是为记。</p>
+	</body>
+</html> 
