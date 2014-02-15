@@ -1,0 +1,18 @@
+﻿<html>
+	<head> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="../main.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="../images/wlz.jpg">
+		<title>x86 汇编学习笔记 (2)</title>
+	</head>
+	<body>
+		<h2>x86 汇编学习笔记 (2)</h2>
+		<h3>求最大值</h3> 
+		<p>创建名称为 max.s 的源码，并保存：</p>
+		<pre> .section .data<br> items:<br> .long 5,23,133,54,0<br> <br> .globl _start<br> _start:<br> <br> movl $0, %edi<br> movl $0, %ebx<br> <br> loop:<br> movl items(,%edi,4), %eax<br> incl %edi<br> <br> cmpl $0, %eax<br> je exit<br> <br> cmpl %eax, %ebx<br> jg loop<br> <br> movl %eax, %ebx<br> jmp loop <br> <br> exit:<br> movl $1, %eax<br> int $0x80<br></pre>
+		<p>汇编，连接，并运行:</p>
+		<pre>as max.s -o max.o<br>ld max.o -o max<br><br>./max<br><br>echo $?<br>133</pre>
+		<h4>注意</h4>
+		<p><code>cmpl %eax, %ebx</code>比较的顺序后者比前者,如<code>jg loop</code>是表示<code>%ebx</code>的值大于<code>%eax</code>的值时满足跳转条件。<p>
+	</body>
+</html> 
