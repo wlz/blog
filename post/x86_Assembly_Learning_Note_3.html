@@ -15,10 +15,22 @@
 		<img src="../images/pushl.png">
 		</ol>
 		<pre>subl $4, %esp<br>movl $1, (%esp)</pre>
-		<h4>证明</h4>
+		<h4>验证</h4>
 		<pre>.globl _start<br>_start:<br><br>movl %esp, %ebp<br>pushl $1<br>subl %esp, %ebx<br><br>movl $1,%eax<br>int $0x80</pre>
 		<p>运行:</p>
 		<pre>4</pre>
 		<p>执行了<code>pushl $1</code>后，栈指针<code>%esp</code>的值减少了 4 。</p>
+		<h3>pop</h3>
+		<p><code>pop %eax</code>执行的过程与<code>push</code>正好相反，相当于如下两步操作：</p>
+		<ol>
+			<li>将地址为<code>%esp</code>中的值载入到寄存器<code>%eax</code>中；
+			<li>栈指针<code>%esp</code>向上移动 4 字节。
+		</ol>
+		<pre>movl (%esp), %eax<br>addl $4, %eax</pre>
+		<h4>验证</h4>
+		<pre>.globl _start<br>_start:<br><br>pushl $1<br><br>movl %esp, %eax<br>popl %ecx<br><br>movl %esp, %ebx<br>subl %eax, %ebx<br><br>movl $1, %eax<br>int $0x80</pre>
+		<p>运行：</p>
+		<pre>4</pre>
+		<p>执行<code>popl</code>前,将<code>%esp</code>的值保存在<code>%eax</code>中，执行<code>popl</code>指令后，将<code>%esp</code>再次取出，保存于<code>%ebx</code>中，相减<code>%eax</code>与<code>%ebx</code>即：两次的栈指针值，相差 4 ，证明执行<code>popl</code>后，栈指针上移了 4 字节。</p>
 	</body>
 </html> 
