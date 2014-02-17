@@ -1,0 +1,21 @@
+﻿<html>
+	<head> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="../main.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="../images/wlz.jpg">
+		<title>x86 汇编学习笔记(4)</title>
+	</head>
+	<body>
+		<h2>x86 汇编学习笔记(4)</h2>
+		<h3>call</h3>
+		<p><code>call address</code>相当于执行了如下两步操作：</p>
+		<p>
+		<ol>
+			<li>将下一条指令的地址入栈；
+			<li>跳转到<code>call</code>指令后的地址。
+		</ol>
+		</p>
+		<pre>pushl %esp<br>jmp address</pre>
+		<h4>验证</h4>
+	</body>
+</html> 
